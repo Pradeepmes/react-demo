@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 import Names from './components/data.json'
 import { useState } from "react"
 //import {Greet} from './components/Greet';
 //import {Message} from './components/Message'
 //import { ClickHandler } from './components/Clickhandler';
-import {Form} from './components/Forms'
+//import {Form} from './components/Forms'
 //import {PostList} from './components/Postlist'
 //import {PostForm} from './components/Postform'
 //import Counter from './components/Counter';
@@ -19,7 +20,30 @@ import {Form} from './components/Forms'
 //import Search from './components/Search';
 //import Charts from './components/Charts';
 //import Autosave from './components/Autosave';
+//import SearchwithAPI from './components/Searchwithapi';
+//import Parentone from './components/Parentone';
+//import Login from './components/Login';
+//import Memo from './components/Memo';
+//import Togglebutton from './components/Togglebutton';
+//import Shareprops from './components/Shareprops';
+//import Error from './components/Error';
+//import Apifetch from './components/Apifetch';
+//import UserContext from './components/UserContext';
+//import Contextapi from './components/Contextapi';
+//import Ref from './components/Ref';
+//import Useeffect from './components/Useeffect';
+//import { Message } from './components/Message';
+//import UseMemo from './components/UseMemo';
+//import CustomHooks from './components/CustomHooks';
+//import Newcounter from './components/Newcounter';
+//import Reusablebtncomponent from './components/Reusablebtncomponent';
 
+import Allinone from './components/Allinone';
+
+
+
+
+ 
 function App() {
 
  /* const [query,setQuery] =useState('')
@@ -33,22 +57,22 @@ function App() {
         return item.title.includes(query) 
 
     })*/
+//const [newdata, setNewdata] = React.useState(0);
 
+/*const handleDataFromPostList = (data) => {
+    setNewdata(data);
+  };*/
+ 
 
   return (
     <div className="App">
-          {/*<div>
-            <input type="text" value={query} onChange={changeHandler} />
-          </div>
-         
-          {
-            filteredName.map((item)=>(
-              <p key={item.id}>{item.id}{item.Name}</p>
-            ))
-          }*/}
+       
+        
+        
+        <Allinone/>
+          
 
-          <Form/>
-
+ 
     </div>
   );
 }

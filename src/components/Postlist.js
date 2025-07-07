@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-export const PostList=()=>{
+export const PostList=({onDataFetched} )=>{
     const [posts, setPosts] = useState([])
 
     useEffect(()=> {

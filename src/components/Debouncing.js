@@ -28,10 +28,10 @@ const Debouncing = () => {
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedTerm(searchTerm);
-    }, 500);
+    }, 2000);
 
     return () => {
-      clearTimeout(handler);
+     // clearTimeout(handler);
     };
   }, [searchTerm]);
 
