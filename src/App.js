@@ -24,7 +24,7 @@ import { useState } from "react"
 //import Parentone from './components/Parentone';
 //import Login from './components/Login';
 //import Memo from './components/Memo';
-//import Togglebutton from './components/Togglebutton';
+import Togglebutton from './components/Togglebutton';
 //import Shareprops from './components/Shareprops';
 //import Error from './components/Error';
 //import Apifetch from './components/Apifetch';
@@ -37,8 +37,9 @@ import { useState } from "react"
 //import CustomHooks from './components/CustomHooks';
 //import Newcounter from './components/Newcounter';
 //import Reusablebtncomponent from './components/Reusablebtncomponent';
-
-import Allinone from './components/Allinone';
+//import ConditionalRendering from './components/ConditionalRendering';
+//import LoginForm from './components/LoginForm';
+//import CompLifeCycleMethod from './components/CompLifeCycleMethod';
 
 
 
@@ -46,22 +47,7 @@ import Allinone from './components/Allinone';
  
 function App() {
 
- /* const [query,setQuery] =useState('')
-
-    const changeHandler =(event)=>{
-        setQuery(event.target.value)
-        console.log(event.target.value)
-    }
-
-    const filteredName = Names.filter((item)=>{
-        return item.title.includes(query) 
-
-    })*/
-//const [newdata, setNewdata] = React.useState(0);
-
-/*const handleDataFromPostList = (data) => {
-    setNewdata(data);
-  };*/
+ 
  
 
   return (
@@ -69,7 +55,7 @@ function App() {
        
         
         
-        <Allinone/>
+        <Togglebutton/>
           
 
  

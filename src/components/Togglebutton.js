@@ -3,17 +3,16 @@ import { useState } from 'react'
 
 const Togglebutton = () => {
 
-    const [on,off] = useState("off")
+    const [initial,setInitial] = useState("edit")
 
     const handler=()=>{
-        off(prevss=> prevss==='on'? "off":"on")
-         
+        setInitial(prev=> prev==='save'? "edit":"save")   
     }
   return (
     <div>
         <h1>Togglebutton</h1>
 
-        <button onClick={handler}>{on}</button>
+        <button onClick={handler}>{initial}</button>
       
     </div>
   )
