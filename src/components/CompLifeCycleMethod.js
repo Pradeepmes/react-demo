@@ -28,7 +28,7 @@ const CompLifeCycleMethod = () => {
   return <div>
             <div>
       <p>Count: {count}</p>
-      <button onClick={() => setCount(c => c + 1)}>Increment</button>
+      <button onClick={() => setCount(c=>c+1)}>Increment</button>
       <input type="text" ref={inputRef} />
     </div>
   </div>;

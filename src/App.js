@@ -24,7 +24,7 @@ import { useState } from "react"
 //import Parentone from './components/Parentone';
 //import Login from './components/Login';
 //import Memo from './components/Memo';
-import Togglebutton from './components/Togglebutton';
+//import Togglebutton from './components/Togglebutton';
 //import Shareprops from './components/Shareprops';
 //import Error from './components/Error';
 //import Apifetch from './components/Apifetch';
@@ -41,25 +41,45 @@ import Togglebutton from './components/Togglebutton';
 //import LoginForm from './components/LoginForm';
 //import CompLifeCycleMethod from './components/CompLifeCycleMethod';
 
+//import Samplewindow from './components/Samplewindow';
+//import DebounceWithAPISearch from './components/DebounceWithAPISearch';
+//import Todolistone from './components/Todolistone';
+//import UseId from './components/UseId';
+//import UseDeferedValue from './components/UseDeferedValue';
+//import UseTransition from './components/UseTransition';
+//import Mainapp from './components/Mainapp';
+//import useWindowSize from './components/useWindowSize';
 
+//import { ErrorBoundary } from 'react-error-boundary';
+//import NextJs from './components/NextJs';
+//import Reactmemoparent from './components/Reactmemoparent';
+//import Todolistnew from './components/Todolistnew';
+//import Callback from './components/Callback';
+//import Userfetch from './components/Userfetch';
 
+//import SendUserdata from './components/SendUserdata';
+//import { Productprovider } from './components/ProductContext';
+//import ProductDisplay from './components/ProductDisplay';
+import Accordion from './components/Accordion';
 
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div role="alert" style={{ color: "red", marginTop: "1rem" }}>
+      <p>🚨 Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>🔁 Reset Counter</button>
+    </div>
+  );
+}
  
 function App() {
-
- 
- 
-
+ // const [resetKey, setResetKey] = useState(0);
+  
   return (
-    <div className="App">
-       
-        
-        
-        <Togglebutton/>
-          
-
  
-    </div>
+    <Accordion/>
+   
+   
   );
 }
 

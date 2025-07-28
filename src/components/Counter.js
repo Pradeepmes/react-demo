@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 
 const Counter = () => {
@@ -11,11 +11,19 @@ const Counter = () => {
     const decreament =()=>{
         setCount(count-1)
     }
+
+     if (count > 5) {
+    throw new Error("Counter limit exceeded!");
+  }
+
+  useEffect(()=>{
+    console.log("rendered again")
+  },[])
   return (
     <div>
         <p> count: {count}</p>
-        <button onClick={increament}/>inc
-        <button onClick={decreament}/>dec
+        <button onClick={increament}>inc</button>
+        <button onClick={decreament}>dec</button>
       
     </div>
   )
