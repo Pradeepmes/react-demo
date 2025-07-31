@@ -1,4 +1,4 @@
-import React  from "react";
+import React, { useEffect }  from "react";
 import { useState } from "react";
 
 
@@ -9,12 +9,19 @@ function Todolistnew(){
 
     const submitHandler = ()=>{
         const newTask ={
-            taskname:"reading",
+            taskname:input,
             status:'pending'
         }
         setTodolist([...todolist,newTask]);
 
     }
+    useEffect(()=>{
+        localStorage.setItem("task",JSON.stringify(todolist))
+    })
+    useEffect(()=>{
+        const getItems=localStorage.getItem("task");
+        setTodolist(JSON.parse(getItems))
+    })
 
     const toggleStatus =(index)=>{
 

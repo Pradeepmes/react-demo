@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Callback = ({label,CallbackClick}) => {
+function Callback({label,CallbackClick}) {
   return (
     <div>
       <button onClick={CallbackClick}>{label}</button>
@@ -9,3 +9,7 @@ const Callback = ({label,CallbackClick}) => {
 }
 
 export default Callback
+
+
+
+

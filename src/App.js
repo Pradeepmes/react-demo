@@ -53,14 +53,17 @@ import { useState } from "react"
 //import { ErrorBoundary } from 'react-error-boundary';
 //import NextJs from './components/NextJs';
 //import Reactmemoparent from './components/Reactmemoparent';
-//import Todolistnew from './components/Todolistnew';
+import Todolistnew from './components/Todolistnew';
 //import Callback from './components/Callback';
 //import Userfetch from './components/Userfetch';
 
 //import SendUserdata from './components/SendUserdata';
 //import { Productprovider } from './components/ProductContext';
 //import ProductDisplay from './components/ProductDisplay';
-import Accordion from './components/Accordion';
+//import Accordion from './components/Accordion';
+import Modalparent from './components/Modalparent';
+
+import Modalportal from './components/Modalportal';
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -73,13 +76,24 @@ function ErrorFallback({ error, resetErrorBoundary }) {
 }
  
 function App() {
- // const [resetKey, setResetKey] = useState(0);
-  
-  return (
  
-    <Accordion/>
-   
-   
+
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <div>
+      <h1>Hello React Portals</h1>
+      <button onClick={() => setShowModal(true)}>Open Modal</button>
+
+      {showModal && (
+        <Modalportal onClose={() => setShowModal(false)}>
+          <h2>This is a modal using a portal!</h2>
+        </Modalportal>
+      )}
+
+      <Modalparent/>
+    </div>
+
   );
 }
 
