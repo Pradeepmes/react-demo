@@ -11,7 +11,7 @@ import { useState } from "react"
 //import {PostForm} from './components/Postform'
 //import Counter from './components/Counter';
 //import Timer from './components/Timer';
-//import Simple from './components/Simple';
+import Simple from './components/Simple';
 //import Buttonclorchange from './components/Buttonclorchange';
 //import Ascendingdescendingorder from './components/Ascendingdescendingorder';
 //import Propsexample from './components/Propsexample';
@@ -53,7 +53,7 @@ import { useState } from "react"
 //import { ErrorBoundary } from 'react-error-boundary';
 //import NextJs from './components/NextJs';
 //import Reactmemoparent from './components/Reactmemoparent';
-import Todolistnew from './components/Todolistnew';
+//import Todolistnew from './components/Todolistnew';
 //import Callback from './components/Callback';
 //import Userfetch from './components/Userfetch';
 
@@ -61,10 +61,19 @@ import Todolistnew from './components/Todolistnew';
 //import { Productprovider } from './components/ProductContext';
 //import ProductDisplay from './components/ProductDisplay';
 //import Accordion from './components/Accordion';
-import Modalparent from './components/Modalparent';
 
-import Modalportal from './components/Modalportal';
+//import Throttle from './components/Throttle';
+//import Modalparent from './components/Modalparent';
 
+//import Modalportal from './components/Modalportal';
+//import Stopcounter from './components/Stopcounter';
+//import Datetime from './components/Datetime';
+
+//import Childone from './components/Useeffectloading/Childone';
+//import Childtwo from './components/Useeffectloading/Childtwo';
+//import Folder from './components/Folder';
+//import explorer from './components/explorer'; // no .json here
+import Reducer from './components/Reducerexample';
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
     <div role="alert" style={{ color: "red", marginTop: "1rem" }}>
@@ -78,20 +87,13 @@ function ErrorFallback({ error, resetErrorBoundary }) {
 function App() {
  
 
-  const [showModal, setShowModal] = useState(false);
+  
 
   return (
     <div>
-      <h1>Hello React Portals</h1>
-      <button onClick={() => setShowModal(true)}>Open Modal</button>
-
-      {showModal && (
-        <Modalportal onClose={() => setShowModal(false)}>
-          <h2>This is a modal using a portal!</h2>
-        </Modalportal>
-      )}
-
-      <Modalparent/>
+      {/*<Folder explorer={explorer}/>*/}
+      <Reducer/>
+     
     </div>
 
   );

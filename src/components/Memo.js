@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Memo = React.memo(function ({name}) {
+const Memo =  ({name})=> {
     console.log("Child rendered");
   return (
     <div>
@@ -8,6 +8,6 @@ const Memo = React.memo(function ({name}) {
       <p>Hello {name}</p>
     </div>
   )
-});
+};
 
-export default Memo
+export default React.memo(Memo)
