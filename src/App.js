@@ -74,7 +74,14 @@ import Simple from './components/Simple';
 //import Folder from './components/Folder';
 //import explorer from './components/explorer'; // no .json here
 import Reducer from './components/Reducerexample';
-function ErrorFallback({ error, resetErrorBoundary }) {
+
+
+import { Provider } from 'react-redux';
+import { store } from './components/ReduxExample/store';
+import AddTodolist from './components/ReduxExample/AddTodolist';
+import TodoList from './components/ReduxExample/todolist';
+import Todolistone from './components/ReduxExample/todolistone';
+{/*function ErrorFallback({ error, resetErrorBoundary }) {
   return (
     <div role="alert" style={{ color: "red", marginTop: "1rem" }}>
       <p>🚨 Something went wrong:</p>
@@ -82,8 +89,10 @@ function ErrorFallback({ error, resetErrorBoundary }) {
       <button onClick={resetErrorBoundary}>🔁 Reset Counter</button>
     </div>
   );
-}
+}*/}
  
+
+
 function App() {
  
 
@@ -92,6 +101,12 @@ function App() {
   return (
     <div>
       {/*<Folder explorer={explorer}/>*/}
+      <Provider store={store}>
+            <AddTodolist/>
+            <TodoList/>
+            <Todolistone/>
+          
+      </Provider>
       <Reducer/>
      
     </div>

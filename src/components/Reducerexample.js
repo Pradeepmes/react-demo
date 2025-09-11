@@ -7,9 +7,7 @@ const initialState={
     age:''
 }
 
-const initialState1={
-    count:0
-}
+
 
 function formReducer(state,action){
     switch(action.type){
@@ -25,26 +23,12 @@ function formReducer(state,action){
     }
 }
 
-function reducer(state,action){
-    switch(action.type){
-        case "increament":
-        return {
-            count:state.count+1
-        }
-        case "decreament":
-            return {
-                count:state.count-1
-            }
 
-        default: 
-        return state
-    }
-}
 
 const Reducerexample = () => {
 
     const [formState,dispatch]= useReducer(formReducer,initialState)
-    const [counter,dispatchone]=useReducer(reducer,initialState1 )
+   
 
     const handleChange=(e)=>{
         dispatch({
@@ -60,22 +44,11 @@ const Reducerexample = () => {
      
     }
 
-    const inc=()=>{
-        dispatchone({
-            type:"increament"
-        })
-    }
-    const dec=()=>{
-        dispatchone({
-            type:"decreament"
-        })
-    }
+    
 
   return (
     <div>
-    {counter.count}
-    <button onClick={inc}>inc</button>
-    <button onClick={dec}>dec</button>
+    
 
     <form onSubmit={handleSubmit}>
         <input type='text' name='name' value={formState.name} onChange={handleChange}/>
