@@ -3,6 +3,8 @@ import './App.css';
 import React from 'react';
 import Names from './components/data.json'
 import { useState } from "react"
+import {BrowserRouter as Router,Route,Routes,Link} from 'react-router-dom'
+
 //import {Greet} from './components/Greet';
 //import {Message} from './components/Message'
 //import { ClickHandler } from './components/Clickhandler';
@@ -11,7 +13,7 @@ import { useState } from "react"
 //import {PostForm} from './components/Postform'
 //import Counter from './components/Counter';
 //import Timer from './components/Timer';
-import Simple from './components/Simple';
+//import Simple from './components/Simple';
 //import Buttonclorchange from './components/Buttonclorchange';
 //import Ascendingdescendingorder from './components/Ascendingdescendingorder';
 //import Propsexample from './components/Propsexample';
@@ -73,14 +75,18 @@ import Simple from './components/Simple';
 //import Childtwo from './components/Useeffectloading/Childtwo';
 //import Folder from './components/Folder';
 //import explorer from './components/explorer'; // no .json here
-import Reducer from './components/Reducerexample';
+//import Reducer from './components/Reducerexample';
+//import { Provider } from 'react-redux';
+//import { store } from './components/ReduxExample/store';
+//import AddTodolist from './components/ReduxExample/AddTodolist';
+//import TodoList from './components/ReduxExample/todolist';
+//import Todolistone from './components/ReduxExample/todolistone';
+//import Filesample from './components/Jsonformatexample/File';
 
+import Home from './components/Routing/Home';
+import About from './components/Routing/About';
+import Fetchapi from './components/customhooks/Fetchapi';
 
-import { Provider } from 'react-redux';
-import { store } from './components/ReduxExample/store';
-import AddTodolist from './components/ReduxExample/AddTodolist';
-import TodoList from './components/ReduxExample/todolist';
-import Todolistone from './components/ReduxExample/todolistone';
 {/*function ErrorFallback({ error, resetErrorBoundary }) {
   return (
     <div role="alert" style={{ color: "red", marginTop: "1rem" }}>
@@ -100,15 +106,23 @@ function App() {
 
   return (
     <div>
+      <Fetchapi/>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+        </Routes>
+     </Router>
+      {/*<Filesample/>*/}
       {/*<Folder explorer={explorer}/>*/}
-      <Provider store={store}>
+     {/**  <Provider store={store}>
             <AddTodolist/>
             <TodoList/>
             <Todolistone/>
           
       </Provider>
       <Reducer/>
-     
+     */}
     </div>
 
   );

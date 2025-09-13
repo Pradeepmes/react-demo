@@ -55,6 +55,7 @@ const Reducerexample = () => {
         <input type='text' name='email' value={formState.email} onChange={handleChange}/>
         <input type='text' name='age' value={formState.age} onChange={handleChange}/>
         <button type="submit">Submit</button>
+        
     </form>
       
     </div>
